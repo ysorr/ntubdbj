@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBJ 學術查詢系統
+    </title>
+<link rel="stylesheet" href="contact/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="https://i.meee.com.tw/nFv3nTS.jpg" alt="教育部 Logo">
+        </div>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">師資等級查詢</a></li>
+                    <li><a href="school.html">學校專長定位</a></li>
+                    <li><a href="teacher.html">教授任教專常</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" id="search-bar" placeholder="請輸入教授名稱...">
+            <svg class="search-icon" id="search-button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+
+        <div class="speech-bubble-container">
+            <div class="speech-bubble">
+                <h2 id="results-title">教授任教專常</h2>
+                <p id="results-content">正在載入教授資料...</p>
+            </div>
+        </div>
+
+    </main>
+
+  <script src="contact/skill.js"></script>
+  <script src="contact/keyboard.js"></script>
+
+</body>
+</html>
