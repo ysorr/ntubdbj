@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBJ 學術查詢系統</title>
     <link rel="stylesheet" href="content/main.css">
-
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
 
@@ -45,6 +48,18 @@
     </main>
   <script src="content/teacher.js"></script>
   <script src="content/keyboard.js"></script>
-
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker 註冊成功: ', registration.scope);
+          })
+          .catch(error => {
+            console.log('ServiceWorker 註冊失敗: ', error);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
